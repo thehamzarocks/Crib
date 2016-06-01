@@ -1,0 +1,100 @@
+
+body {
+	box-sizing: border-box;
+}
+#header-nav {
+	
+	margin-bottom: 50px;
+}
+
+#title {
+	text-decoration: none;
+}
+
+#main-image {
+	height: 500px;
+	width: 100%;
+
+}
+
+h2 {
+	text-align: center;
+}
+
+
+
+#intro, #lang-intro, #about-intro{
+	font-size: 2em;
+	margin-bottom: 30px;
+	font-family: 'Sarpanch', sans-serif;
+}
+
+
+#lang-tile, #framework-tile, #algo-tile {		
+	height: 250px;
+	position: relative;	
+	border: 1px solid black;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+#lang-tile {
+	background: url('../images/lang-img.jpg') center;
+}
+
+#framework-tile {
+	background: url('../images/framework-img.jpg');
+}
+
+#algo-tile {
+	background: url('../images/algo-img.jpg');
+}
+
+#lang-tile span, #framework-tile span, #algo-tile span {
+	background-color: #ffdb4d;	
+	position: absolute;
+	bottom: 0;
+	height:30px;
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+#lang-tile:hover, #framework-tile:hover, #algo-tile:hover {
+	 box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#langs-tile {
+	height: 250px;
+	position: relative;	
+	border: 1px solid black;	
+	margin-bottom: 30px;	
+}
+
+
+
+
+
+#langs-tile span {
+	background-color: #ffdb4d;	
+	float:left;	
+	position: absolute;
+	height:30px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+#langs-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+@media(max-width: 768px) {
+	#collapsable-nav {
+		margin-top: 40px;
+		width: 100%;
+		text-align: center;
+	}
+}
