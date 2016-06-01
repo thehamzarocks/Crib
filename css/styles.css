@@ -91,6 +91,18 @@ h2 {
 	box-shadow: 0 1px 5px 1px #cccccc;
 }
 
+.dropdown-menu {
+	width:100%;
+}
+
+#dropdown-link {
+	text-decoration: none;
+	font-size: 2em;
+	margin-bottom: 30px;
+	font-family: 'Sarpanch', sans-serif;
+	background-color: #f8f8f8;
+}
+
 @media(max-width: 768px) {
 	#collapsable-nav {
 		margin-top: 40px;
