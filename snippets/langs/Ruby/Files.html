@@ -1,0 +1,16 @@
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #60a0b0; font-style: italic">#Files</span>
+
+<span style="color: #60a0b0; font-style: italic">#Reading</span>
+<span style="color: #60add5">File</span><span style="color: #666666">.</span>foreach(<span style="color: #4070a0">&#39;test.txt&#39;</span>) <span style="color: #007020; font-weight: bold">do</span> <span style="color: #666666">|</span>line<span style="color: #666666">|</span> <span style="color: #60a0b0; font-style: italic">#can use File.exists? &#39;test.txt&#39; to check.</span>
+	<span style="color: #007020">puts</span> line <span style="color: #60a0b0; font-style: italic">#prints the line</span>
+	<span style="color: #007020">p</span> line	<span style="color: #60a0b0; font-style: italic">#prints how the line object is represented</span>
+	<span style="color: #007020">p</span> line<span style="color: #666666">.</span>chomp <span style="color: #60a0b0; font-style: italic">#removes \n</span>
+	<span style="color: #007020">p</span> line<span style="color: #666666">.</span>split <span style="color: #60a0b0; font-style: italic">#splits the line into an array of words</span>
+<span style="color: #007020; font-weight: bold">end</span>
+
+<span style="color: #60a0b0; font-style: italic">#Writing</span>
+<span style="color: #60add5">File</span><span style="color: #666666">.</span>open (<span style="color: #4070a0">&quot;test1.txt&quot;</span>,<span style="color: #4070a0">&quot;w&quot;</span>) <span style="color: #007020; font-weight: bold">do</span> <span style="color: #666666">|</span>file<span style="color: #666666">|</span>
+	file<span style="color: #666666">.</span>puts <span style="color: #4070a0">&quot;One line&quot;</span>
+	file<span style="color: #666666">.</span>puts <span style="color: #4070a0">&quot;Another&quot;</span>
+<span style="color: #007020; font-weight: bold">end</span>
+</pre></div>

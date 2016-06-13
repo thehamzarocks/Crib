@@ -1,0 +1,33 @@
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #60a0b0; font-style: italic"># Blocks</span>
+<span style="color: #40a070">3</span><span style="color: #666666">.</span>times {<span style="color: #007020">puts</span> <span style="color: #4070a0">&quot;Hello&quot;</span>}
+
+<span style="color: #40a070">2</span><span style="color: #666666">.</span>times <span style="color: #007020; font-weight: bold">do</span> <span style="color: #666666">|</span>index<span style="color: #666666">|</span> <span style="color: #60a0b0; font-style: italic"># index acts as a parameter here</span>
+	<span style="color: #007020; font-weight: bold">if</span> index <span style="color: #666666">&gt;</span> <span style="color: #40a070">0</span>
+		<span style="color: #007020">puts</span> index
+	<span style="color: #007020; font-weight: bold">end</span>
+<span style="color: #007020; font-weight: bold">end</span>
+
+<span style="color: #60a0b0; font-style: italic"># or </span>
+
+<span style="color: #40a070">2</span><span style="color: #666666">.</span>times {<span style="color: #666666">|</span>index<span style="color: #666666">|</span> <span style="color: #007020">puts</span> index <span style="color: #007020; font-weight: bold">if</span> index <span style="color: #666666">&gt;</span> <span style="color: #40a070">0</span> } <span style="color: #60a0b0; font-style: italic"># one-liner</span>
+
+
+<span style="color: #60a0b0; font-style: italic"># Blocks in methods</span>
+
+<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">twice_implicit</span>
+	<span style="color: #007020; font-weight: bold">return</span> <span style="color: #4070a0">&quot;no block&quot;</span> <span style="color: #007020; font-weight: bold">unless</span> <span style="color: #007020">block_given?</span> <span style="color: #60a0b0; font-style: italic"># implicit checking whether a block was provided</span>
+	<span style="color: #007020; font-weight: bold">yield</span> <span style="color: #60a0b0; font-style: italic"># &quot;calls&quot; the block</span>
+	<span style="color: #007020; font-weight: bold">yield</span>
+<span style="color: #007020; font-weight: bold">end</span>
+
+<span style="color: #007020">puts</span> twice_implicit {<span style="color: #007020">print</span> <span style="color: #4070a0">&quot;Hello&quot;</span>} <span style="color: #60a0b0; font-style: italic"># Hello printed twice in seperate lines</span>
+<span style="color: #007020">puts</span> twice_implicit <span style="color: #60a0b0; font-style: italic"># no block</span>
+
+<span style="color: #60a0b0; font-style: italic"># or</span>
+
+<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">twice_explicit</span>(<span style="color: #666666">&amp;</span>i_block) <span style="color: #60a0b0; font-style: italic"># use &amp; before the last parameter</span>
+	<span style="color: #007020; font-weight: bold">return</span> <span style="color: #4070a0">&quot;no block&quot;</span> <span style="color: #007020; font-weight: bold">if</span> i_block<span style="color: #666666">.</span>nil?
+	i_block<span style="color: #666666">.</span>call
+	i_block<span style="color: #666666">.</span>call
+<span style="color: #007020; font-weight: bold">end</span>
+</pre></div>

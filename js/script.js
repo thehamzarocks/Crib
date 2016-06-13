@@ -48,7 +48,7 @@
 					function(langHTML) {						
 						var langViewsHTML = 
 							buildLangViewsHTML(langs, langTitleHTML, langHTML);
-						insertHtml("#main-content", langViewsHTML);
+						insertHtml("#main-content", langViewsHTML);						
 					},
 					false);
 			},
