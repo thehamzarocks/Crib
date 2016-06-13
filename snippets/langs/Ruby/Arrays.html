@@ -1,0 +1,34 @@
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #60a0b0; font-style: italic">#Arrays</span>
+<span style="color: #60a0b0; font-style: italic">#collection of object references</span>
+
+heterogenous_array <span style="color: #666666">=</span> <span style="color: #666666">[</span><span style="color: #40a070">1</span>, <span style="color: #4070a0">&quot;two&quot;</span>, <span style="color: #517918">:three</span><span style="color: #666666">]</span>
+<span style="color: #007020">puts</span> heterogenous_array<span style="color: #666666">[</span><span style="color: #40a070">1</span><span style="color: #666666">]</span> <span style="color: #60a0b0; font-style: italic">#displays two</span>
+
+arr_words <span style="color: #666666">=</span> <span style="color: #c65d09">%w{what a great day!}</span>
+<span style="color: #007020">puts</span> <span style="color: #4070a0">&quot;</span><span style="color: #70a0d0; font-style: italic">#{</span>arr_words<span style="color: #666666">.</span>first<span style="color: #70a0d0; font-style: italic">}</span><span style="color: #4070a0">-</span><span style="color: #70a0d0; font-style: italic">#{</span>arr_words<span style="color: #666666">.</span>last<span style="color: #70a0d0; font-style: italic">}</span><span style="color: #4070a0">&quot;</span> <span style="color: #60a0b0; font-style: italic">#what-day</span>
+<span style="color: #007020">puts</span> arr_words<span style="color: #666666">[-</span><span style="color: #40a070">2</span><span style="color: #666666">]</span> <span style="color: #60a0b0; font-style: italic">#great</span>
+<span style="color: #007020">p</span> arr_words<span style="color: #666666">[-</span><span style="color: #40a070">3</span>, <span style="color: #40a070">2</span><span style="color: #666666">]</span> <span style="color: #60a0b0; font-style: italic">#[&quot;a&quot; &quot;great&quot;]</span>
+<span style="color: #007020">puts</span> arr_words<span style="color: #666666">.</span>join(<span style="color: #4070a0">&#39;,&#39;</span>) <span style="color: #60a0b0; font-style: italic">#what,a,great,day!</span>
+
+<span style="color: #60a0b0; font-style: italic">#Modifying</span>
+stack <span style="color: #666666">=</span> <span style="color: #666666">[]</span>
+stack<span style="color: #666666">.</span>push(<span style="color: #4070a0">&quot;two&quot;</span>) <span style="color: #60a0b0; font-style: italic">#append using push or &lt;&lt;</span>
+
+queue <span style="color: #666666">=</span> <span style="color: #666666">[]</span>
+queue<span style="color: #666666">.</span>push(<span style="color: #4070a0">&quot;one&quot;</span>)
+queue<span style="color: #666666">.</span>push(<span style="color: #4070a0">&quot;two&quot;</span>)
+<span style="color: #007020">puts</span> queue<span style="color: #666666">.</span>shift <span style="color: #60a0b0; font-style: italic">#one (shifts the first element out)</span>
+
+a <span style="color: #666666">=</span> <span style="color: #666666">[</span><span style="color: #40a070">5</span>,<span style="color: #40a070">4</span>,<span style="color: #40a070">3</span>,<span style="color: #40a070">2</span><span style="color: #666666">]</span>
+a<span style="color: #666666">[</span><span style="color: #40a070">6</span><span style="color: #666666">]</span> <span style="color: #666666">=</span> <span style="color: #40a070">33</span>
+<span style="color: #007020">p</span> a <span style="color: #60a0b0; font-style: italic">#[5, 4, 3, 2, nil, nil, 33], auto expandable</span>
+
+a <span style="color: #666666">=</span> <span style="color: #666666">[</span><span style="color: #40a070">1</span>,<span style="color: #40a070">3</span>,<span style="color: #40a070">4</span>,<span style="color: #40a070">7</span>,<span style="color: #40a070">8</span>,<span style="color: #40a070">10</span><span style="color: #666666">]</span>
+a<span style="color: #666666">.</span>each{<span style="color: #666666">|</span>num<span style="color: #666666">|</span> <span style="color: #007020">print</span> num} <span style="color: #60a0b0; font-style: italic">#loops through the array 1347810</span>
+
+new_arr <span style="color: #666666">=</span> a<span style="color: #666666">.</span>select{<span style="color: #666666">|</span>num<span style="color: #666666">|</span> num<span style="color: #666666">&lt;</span><span style="color: #40a070">10</span>}
+			<span style="color: #666666">.</span>reject{<span style="color: #666666">|</span>num<span style="color: #666666">|</span> num<span style="color: #666666">.</span>even?} <span style="color: #60a0b0; font-style: italic">#[1, 3, 7]</span>
+
+
+new_arr <span style="color: #666666">=</span> a<span style="color: #666666">.</span>map { <span style="color: #666666">|</span>e<span style="color: #666666">|</span> e<span style="color: #666666">*</span><span style="color: #40a070">3</span> } <span style="color: #60a0b0; font-style: italic">#multiplies each element by 3</span>
+</pre></div>

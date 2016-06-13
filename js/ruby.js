@@ -45,7 +45,12 @@
 		false);
 	}
 
-	
+	rb.loadArrays = function() {
+		$ajaxUtils.sendGetRequest("snippets/langs/Ruby/Arrays.html", function(html) {
+			document.querySelector("#arrays").innerHTML = html;
+		},
+		false);
+	}	
 
 
 	global.$rb = rb;
